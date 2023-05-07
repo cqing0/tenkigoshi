@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/mauiman77/tenkigoshi#readme",
   "devDependencies": {
+    "css-loader": "^6.7.3",
     "eslint": "^8.40.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "style-loader": "^3.3.2",
     "webpack": "^5.82.0",
     "webpack-cli": "^5.1.0"
   }
