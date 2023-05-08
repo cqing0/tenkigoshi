@@ -9,11 +9,24 @@ const layout = (() => {
     return mainBit;
   }
 
-  const initPage = () => {
-    body.appendChild(createMainBit());
+  function createSearch() {
+    const searchBar = document.createElement('text');
+    return searchBar;
+  }
+
+  const addText = (text) => {
+    if (document.querySelector('main')) {
+      const whereToaddText = document.querySelector('main');
+      whereToaddText.textContent += text;
+    }
   };
 
-  return { initPage };
+  const initPage = () => {
+    body.appendChild(createMainBit());
+    body.appendChild(createSearch());
+  };
+
+  return { initPage, addText };
 })();
 
 export default layout;
