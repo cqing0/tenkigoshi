@@ -1,4 +1,4 @@
-*, *::after, *::before {
+*, *::after, *::before, p {
   box-sizing: border-box;
   margin: 0;
 }
@@ -19,5 +19,13 @@ body {
   width: 75%;
   min-height: 50rem;
   min-width: 75rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 20% 20% 1fr;
 }
 
+div.location-info {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
