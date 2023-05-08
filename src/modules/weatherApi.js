@@ -13,13 +13,14 @@ const weather = (() => {
     const cityName = cityJson.location.name;
     const time = cityJson.location.localtime;
 
-    console.log(country);
-    console.log(cityName);
-    console.log(time);
+    return { country, cityName, time };
+  }
+  async function getLocationWeather(city) {
+    const cityJson = await getApiJson(city);
 
-    console.log(cityJson);
-
-    return cityJson;
+    const tempCel = cityJson.current.temp_c;
+    const tempFar = cityJson.current.temp_f;
+    const weather = cityJson.current.condition.text;
   }
   return { getLocation };
 })();

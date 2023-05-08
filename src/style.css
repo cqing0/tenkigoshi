@@ -1,7 +1,23 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBit {
+  height: 75%;
+  width: 75%;
+  min-height: 50rem;
+  min-width: 75rem;
+  background-color: black;
 }
