@@ -2,6 +2,10 @@
 
 :root {
   --font: 'Sora', sans-serif;
+  --cold: radial-gradient(circle, #61d4fd, #53ccf8, #43c4f4, #32bcef, #18b4eb);
+  --tepid: radial-gradient(circle, #3ff86e, #36f561, #2df254, #23ee45, #18eb33);
+  --warm: radial-gradient(circle, #f8e03f, #f5de37, #f2dc2f, #eeda25, #ebd818);
+  --hot: radial-gradient(circle, #e96227, #ea6224, #ea6120, #eb611c, #eb6118);
 }
 
 *, *::after, *::before, p {
@@ -14,7 +18,6 @@ html, body {
 }
 
 body {
-  background-color: bisque;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +33,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 
-  background-color: rgba(0,0,0, 10%);
+}
+
+.mainBit > * {
+  color: rgba(255,255,255, 90%);
 }
 
 div.location-info {
@@ -49,6 +55,8 @@ div.condition {
   justify-content: flex-end;
   padding-right: 6rem;
 
+  margin-top: 4rem;
+
   font-family: var(--font);
   font-size: 2.5rem;
 }
@@ -64,13 +72,21 @@ div.far {
   font-family: var(--font);
   font-size: 8rem;
 
-  padding: 0 0 1rem 2rem;
+  padding: 0 0 0.2rem 2rem;
 }
 
 div.cel {
-  background-color: orange;
   grid-row: 2/3;
   grid-column: 2/3;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  font-family: var(--font);
+  font-size: 8rem;
+
+  padding: 0.2rem 0 0 2rem;
 }
 
 div.location {

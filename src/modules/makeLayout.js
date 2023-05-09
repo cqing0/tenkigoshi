@@ -25,11 +25,26 @@ const layout = (() => {
     element.appendChild(spanBit);
   };
 
+  const setBackground = (celsius) => {
+    if (celsius < 10) {
+      return 'var(--cold)';
+    } if (celsius >= 10 && celsius <= 22) {
+      return 'var(--tepid)';
+    } if (celsius >= 22 && celsius <= 32) {
+      return 'var(--warm)';
+    } if (celsius >= 32) {
+      return 'var(--hot)';
+    }
+    return 'grey';
+  };
+
   const initPage = () => {
     body.appendChild(createSearch());
   };
 
-  return { initPage, addText, addDegree };
+  return {
+    initPage, addText, addDegree, setBackground,
+  };
 })();
 
 export default layout;

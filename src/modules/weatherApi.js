@@ -18,7 +18,6 @@ const weather = (() => {
 
     const tempCel = cityJson.current.temp_c;
     const tempFar = cityJson.current.temp_f;
-    console.log(tempFar);
     const weatherCondition = cityJson.current.condition.text;
 
     return { tempCel, tempFar, weatherCondition };
