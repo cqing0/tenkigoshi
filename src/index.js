@@ -19,6 +19,10 @@ async function testApi() {
   const conditionBit = document.querySelector('.condition');
   conditionBit.textContent = `${newCityWeather.weatherCondition}`;
 
+  const farTempBit = document.querySelector('.far');
+  farTempBit.textContent = `${newCityWeather.tempFar}`;
+  layout.addDegree(farTempBit, 'F');
+
   console.log(newCity);
   console.log(newCityWeather);
 }

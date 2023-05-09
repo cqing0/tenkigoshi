@@ -19,11 +19,17 @@ const layout = (() => {
     }
   };
 
+  const addDegree = (element, text) => {
+    const spanBit = document.createElement('span');
+    spanBit.textContent = `°${text}`;
+    element.appendChild(spanBit);
+  };
+
   const initPage = () => {
     body.appendChild(createSearch());
   };
 
-  return { initPage, addText };
+  return { initPage, addText, addDegree };
 })();
 
 export default layout;
