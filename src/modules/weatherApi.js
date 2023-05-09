@@ -9,7 +9,7 @@ const weather = (() => {
 
     const { country } = cityJson.location;
     const cityName = cityJson.location.name;
-    const time = cityJson.location.localtime;
+    const time = cityJson.location.localtime.slice(11);
 
     return { country, cityName, time };
   }
@@ -22,7 +22,7 @@ const weather = (() => {
 
     return { tempCel, tempFar, weatherCondition };
   }
-  return { getLocation };
+  return { getLocation, getLocationWeather };
 })();
 
 export default weather;

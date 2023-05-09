@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+  --font: 'Sora', sans-serif;
+}
+
 *, *::after, *::before, p {
   box-sizing: border-box;
   margin: 0;
@@ -30,10 +36,12 @@ body {
 div.location-info {
   grid-row: 1/2;
   grid-column: 1/2;
-  background-color: pink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-div.location-info.condition {
+div.condition {
   grid-row: 2/3;
   grid-column: 1/2;
   background-color: blue;
@@ -49,4 +57,46 @@ div.cel {
   background-color: orange;
   grid-row: 2/3;
   grid-column: 2/3;
+}
+
+div.location {
+  height: 70%;
+  width: 70%;
+
+  display: grid;
+  grid-template-rows: 1fr 0.7fr 1.4fr;
+  grid-template-columns: 1fr;
+}
+
+p.time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  margin-right: 1rem;
+
+  font-size: 3rem;
+  font-family: var(--font);
+}
+
+p.country {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  margin-left: 4rem;
+
+  font-size: 1.6rem;
+  font-family: var(--font);
+}
+
+p.city {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-left: 4rem;
+
+  font-size: 4rem;
+  font-family: var(--font);
 }
