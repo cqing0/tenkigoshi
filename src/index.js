@@ -16,6 +16,9 @@ async function testApi() {
   const cityBit = document.querySelector('.location .city');
   cityBit.textContent = `${newCity.cityName}`;
 
+  const conditionBit = document.querySelector('.condition');
+  conditionBit.textContent = `${newCityWeather.weatherCondition}`;
+
   console.log(newCity);
   console.log(newCityWeather);
 }
